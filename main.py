@@ -15,6 +15,7 @@ while(1):
             print(output)
     else:
         print "-||-"
-    file.write(output + '\n')
+    if (currentNumberofWatcher != None):
+        file.write(output + '\n')
 fo.close() #wont run if stopped by ctrl+c
 browser.close()
