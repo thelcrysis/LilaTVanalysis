@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import string
+import math
+from math import *
 
 def GrabDataFromFiles(src): #grab data from text files formatted as 'time-viewers'
     Watchers = [] #only number of Watchers recorded, timestamps are not required as check is done every 2 secs
@@ -23,5 +25,22 @@ def Plotter():
     timeline = []
     for i in range(len(y)):
         timeline.append(i*2) #creating timestamps
+
+    #calculating some more stats
+    average = sum(y)/len(y)
+    maximum = int(max(y))
+    minimum = int(min(y))
+
     plt.plot(timeline, y)
+
+    print 'average ' + str(round(average))
+    print 'max ' + str(maximum)
+    print 'min ' + str(minimum)
+    #plotting those stats
+    plt.plot((-1, max(timeline)), (average, average), 'r', alpha=0.5, label='max')
+    plt.plot((-1, max(timeline)), (maximum, maximum), 'g', alpha=0.3)
+    plt.plot((-1, max(timeline)), (minimum, minimum), 'g', alpha=0.3)
+
+
+
     plt.show()

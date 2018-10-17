@@ -3,7 +3,6 @@ import time
 import matplotlib.pyplot as plt
 import string
 from selenium import webdriver            #all dependencies
-import time
 from time import gmtime, strftime
 import main
 import plotter
