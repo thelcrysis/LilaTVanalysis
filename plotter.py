@@ -10,11 +10,19 @@ def GrabDataFromFiles(src): #grab data from text files formatted as 'time-viewer
     return Watchers
 
 
-
 #plotter
-y = GrabDataFromFiles("fo.txt")
-timeline = []
-for i in range(len(y)):
-    timeline.append(i*2) #creating timestamps
-plt.plot(timeline, y)
-plt.show()
+def Plotter():
+
+    print(GrabDataFromFiles("record.txt"))
+    y = []
+
+    all=string.maketrans('','')
+    nodigs=all.translate(all, string.digits)
+
+    for iter in GrabDataFromFiles("record.txt"):
+         y.append(int(iter.translate(all, nodigs)))
+    timeline = []
+    for i in range(len(y)):
+        timeline.append(i*2) #creating timestamps
+    plt.plot(timeline, y)
+    plt.show()
