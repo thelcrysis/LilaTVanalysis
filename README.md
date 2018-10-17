@@ -6,7 +6,7 @@
   
 
 ## Dependencies
-- Selenium + firefox webdriver
+- Selenium + chromedriver
 - matplotlib
 
 
