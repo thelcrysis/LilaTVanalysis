@@ -9,11 +9,6 @@
 - Selenium + firefox webdriver
 - matplotlib
 
-## TODOs
-- [ ] Replace firefox webdriver with phantomjs
-- [ ] 24 hour track
-- [ ] Option to discard sudden changes (>20%) (probably lila bug)
-
 
 
 
