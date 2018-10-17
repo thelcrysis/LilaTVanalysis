@@ -11,10 +11,10 @@ while(1):
     if (currentNumberofWatcher != browser.find_element_by_class_name("number").text):
         currentNumberofWatcher = browser.find_element_by_class_name("number").text
         if (currentNumberofWatcher != None):
-            output = (strftime("%d %m %Y %H:%M:%S", gmtime()) + "-> " + currentNumberofWatcher)
-            file.write(output + '\n')
+            output = (strftime("%d %m %Y %H:%M:%S", gmtime()) + "-" + currentNumberofWatcher)
             print(output)
     else:
         print "-||-"
-fo.close()
+    file.write(output + '\n')
+fo.close() #wont run if stopped by ctrl+c
 browser.close()
