@@ -13,7 +13,7 @@ def scraper(cycles):
             currentNumberofWatcher = browser.find_element_by_class_name("number").text
             if (currentNumberofWatcher != ''):
                 output = (strftime("%d %m %Y %H:%M:%S", gmtime()) + "-" + currentNumberofWatcher)
-                print(output)
+                print(output)    #<---- prints out whats happening
         else:
             print "-||-"
         if (currentNumberofWatcher != ''):
