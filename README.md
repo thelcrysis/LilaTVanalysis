@@ -4,7 +4,7 @@
 
   Whole project will most likely be redone in nodejs hoping to make it real time with nicer and more informative charts. Examples of output can be also seen in repository. 
   
-
+![Chart example](chartexample.png)
 ## Dependencies
 - Selenium + chromedriver
 - matplotlib
